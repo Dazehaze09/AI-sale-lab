@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Page System - คอร์สสอนสร้างเพจด้วย AI 100%</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Prompt -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Prompt', sans-serif;
+        }
+        /* Custom Glowing Animation for Primary CTA */
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 15px rgba(34, 197, 94, 0.4); }
+            50% { box-shadow: 0 0 30px rgba(34, 197, 94, 0.8); }
+        }
+        .animate-pulse-glow {
+            animation: pulse-glow 2s infinite;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased pb-24 md:pb-0">
+
+    <!-- 1. STICKY COUNTDOWN BAR -->
+    <div class="bg-gradient-to-r from-red-600 via-rose-600 to-red-600 text-white py-2.5 px-4 text-center text-sm font-medium sticky top-0 z-50 shadow-md flex items-center justify-center gap-2 flex-wrap">
+        <span class="flex items-center gap-1.5 font-bold">
+            <i class="fa-solid fa-fire text-amber-300 animate-bounce"></i>
+            ราคาโปรโมชั่นพิเศษ หมดเขตใน
+        </span>
+        <div id="countdown" class="font-mono bg-slate-900/60 px-3 py-0.5 rounded-full text-amber-300 font-bold border border-amber-400/30">
+            05:00:00
+        </div>
+    </div>
+
+    <!-- 2. NAVIGATION BAR -->
+    <nav class="bg-slate-900/80 backdrop-blur-md border-b border-slate-800 py-3 px-4 sm:px-8 sticky top-10 z-40">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 to-amber-300 flex items-center justify-center text-slate-950 font-black text-xl shadow-lg">
+                    AI
+                </div>
+                <span class="font-bold text-lg sm:text-xl tracking-tight text-white">AI Page System</span>
+            </div>
+            <a href="#pricing" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-4 py-2 rounded-lg text-sm transition-all shadow-md">
+                ดูราคาคอร์ส
+            </a>
+        </div>
+    </nav>
+
+    <!-- 3. HERO SECTION -->
+    <header class="relative overflow-hidden py-16 sm:py-24 px-4 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-950">
+        <!-- Glow Effects -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/3 left-1/4 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <span class="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/30 text-amber-400 px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold mb-6">
+                <i class="fa-solid fa-bolt"></i> ระบบสำเร็จรูปให้ AI ทำงานแทนคุณ 100%
+            </span>
+            <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight mb-6">
+                เพจนี้ <span class="bg-gradient-to-r from-amber-400 to-amber-200 bg-clip-text text-transparent">AI สร้างให้ 100%</span><br class="hidden sm:inline">
+                และคุณทำได้เหมือนกัน แค่คลิกเดียว
+            </h1>
+            <p class="text-slate-300 text-base sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+                ระบบสำเร็จรูปให้ AI สร้างเพจ Facebook พร้อมปก โลโก้ ข้อมูลครบถ้วน และคิวโพสต์ขาย 39 โพสต์ ภายใน 1 วัน โดยไม่ต้องลองผิดลองถูกเอง
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://m.me/your-page-id" target="_blank" class="w-full sm:w-auto bg-green-500 hover:bg-green-400 text-slate-950 font-extrabold text-lg sm:text-xl px-8 py-4 rounded-xl shadow-xl transition-all transform hover:-translate-y-0.5 animate-pulse-glow flex items-center justify-center gap-3">
+                    <i class="fa-brands fa-facebook-messenger text-2xl"></i>
+                    พิมพ์ "สนใจ" ทักแชทเลย
+                    <i class="fa-solid fa-arrow-right text-sm"></i>
+                </a>
+            </div>
+            <p class="text-slate-400 text-xs mt-3">
+                <i class="fa-solid fa-shield-halved text-amber-400 mr-1"></i> ปลอดภัย ไม่ต้องใช้รหัสผ่าน Facebook / ตอบแชทอัตโนมัติทันที
+            </p>
+        </div>
+    </header>
+
+    <!-- 4. PAIN POINTS SECTION -->
+    <section class="py-16 px-4 bg-slate-900/50 border-y border-slate-800">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl sm:text-4xl font-bold text-white mb-3">
+                    ถ้าคุณเคยเจอปัญหาแบบนี้… <span class="text-rose-400">คุณไม่ใช่คนเดียวครับ</span>
+                </h2>
+                <p class="text-slate-400 text-sm sm:text-base">มือใหม่ 9 ใน 10 คน ติดอยู่ตรงจุดเดียวกันหมด ทำให้ไม่เริ่มสักที</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Problem 1 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition">
+                    <div class="w-12 h-12 rounded-xl bg-rose-500/10 text-rose-400 flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-store-slash"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-white mb-2">อยากขายของ แต่ทำเพจไม่เป็น</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">ไม่รู้จะเริ่มยังไง คิดชื่อไม่ออก ทำโลโก้ไม่เป็น กรอกข้อมูลเพจก็งงว่าต้องใส่อะไรบ้าง</p>
+                </div>
+                <!-- Problem 2 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition">
+                    <div class="w-12 h-12 rounded-xl bg-rose-500/10 text-rose-400 flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-money-bill-transfer"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-white mb-2">จ้างคนทำก็แพง รอเป็นอาทิตย์</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">ค่าโลโก้ 500 ภาพปก 500 โพสต์ละ 100 รวมกันหลักพันขึ้น กว่าจะได้งานก็หลายวันเสียเวลา</p>
+                </div>
+                <!-- Problem 3 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition">
+                    <div class="w-12 h-12 rounded-xl bg-rose-500/10 text-rose-400 flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-white mb-2">เคยเรียน AI มา แต่ใช้ได้แค่ถามตอบ</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">สั่งอะไรก็ได้คำตอบครึ่งๆ กลางๆ ต้องมาแก้เอง สุดท้ายท้อเลิกใช้ไปเอง</p>
+                </div>
+                <!-- Problem 4 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition">
+                    <div class="w-12 h-12 rounded-xl bg-rose-500/10 text-rose-400 flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-pen-nib"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-white mb-2">ไม่มีเวลานั่งทำโพสต์ทุกวัน</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">คิดคอนเทนต์ไม่ออก โพสต์ไม่ต่อเนื่อง เพจก็เงียบเหงา ไร้คนติดตาม</p>
+                </div>
+                <!-- Problem 5 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition sm:col-span-2 lg:col-span-2">
+                    <div class="w-12 h-12 rounded-xl bg-rose-500/10 text-rose-400 flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-arrow-trend-down"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-white mb-2">เห็นคนอื่นเพจสวย ขายดี รู้สึกตามไม่ทัน</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">ทั้งที่สินค้าเราก็ดี แต่เพราะเพจดูไม่น่าเชื่อถือ ไม่มีช่องทางโชว์สินค้าให้คนเห็นอย่างมืออาชีพ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. HOW IT WORKS SECTION -->
+    <section class="py-16 px-4 bg-slate-950">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-2xl sm:text-4xl font-bold text-white mb-3">
+                ระบบเดียวจบ <span class="text-amber-400">3 ขั้นตอน AI ทำให้เอง</span>
+            </h2>
+            <p class="text-slate-400 text-sm sm:text-base mb-12">ไม่ต้องเรียนคุยกับ AI ให้เก่ง ไม่ต้องเป็นโปรแกรมเมอร์ แค่ทำตาม 3 ขั้นนี้</p>
+
+            <div class="grid md:grid-cols-3 gap-8 relative">
+                <!-- Step 1 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-8 relative flex flex-col items-center">
+                    <div class="w-12 h-12 rounded-full bg-amber-500 text-slate-950 font-extrabold text-xl flex items-center justify-center mb-6 shadow-lg">1</div>
+                    <h3 class="font-bold text-xl text-white mb-3">ก๊อปวางระบบสำเร็จรูป</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">คัดลอก System Prompt สำเร็จรูปที่เราเซ็ตค่าไว้อย่างสมบูรณ์แบบไปวางใน AI</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-8 relative flex flex-col items-center">
+                    <div class="w-12 h-12 rounded-full bg-amber-500 text-slate-950 font-extrabold text-xl flex items-center justify-center mb-6 shadow-lg">2</div>
+                    <h3 class="font-bold text-xl text-white mb-3">สั่งประโยคเดียว</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">พิมพ์บอก AI สั้นๆ ว่าคุณต้องการขายอะไร เช่น "อยากขายกาแฟเพื่อสุขภาพ"</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-8 relative flex flex-col items-center">
+                    <div class="w-12 h-12 rounded-full bg-amber-500 text-slate-950 font-extrabold text-xl flex items-center justify-center mb-6 shadow-lg">3</div>
+                    <h3 class="font-bold text-xl text-white mb-3">AI ทำจนจบพร้อมขาย</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">AI จะสร้างชื่อเพจ โลโก้ ปก รายละเอียด และโพสต์คอนเทนต์ให้อัตโนมัติทันที</p>
+                </div>
+            </div>
+
+            <div class="mt-12">
+                <a href="https://m.me/your-page-id" target="_blank" class="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-lg px-8 py-3.5 rounded-xl transition shadow-lg">
+                    เอาระบบนี้มาใช้เลย <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. DELIVERABLES / FEATURES SECTION -->
+    <section class="py-16 px-4 bg-slate-900/40 border-y border-slate-800">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl sm:text-4xl font-bold text-white mb-3">
+                    จบวันแรก <span class="text-amber-400">เพจพร้อมขายอยู่ในมือ</span>
+                </h2>
+                <p class="text-slate-400 text-sm sm:text-base">ไม่ใช่แค่ "ได้ความรู้" แต่ได้ผลงานจริงกลับบ้าน 6 รายการนี้</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl">
+                    <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center text-lg font-bold mb-4">01</div>
+                    <h3 class="font-bold text-white text-lg mb-2">โลโก้เพจสุดพรีเมียม</h3>
+                    <p class="text-slate-400 text-sm">AI ออกแบบโลโก้ตรงตามคอนเซ็ปต์แบรนด์ คมชัด นำไปใช้งานได้จริงทันที</p>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl">
+                    <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center text-lg font-bold mb-4">02</div>
+                    <h3 class="font-bold text-white text-lg mb-2">ภาพปกเพจ (Facebook Cover)</h3>
+                    <p class="text-slate-400 text-sm">ภาพปกดีไซน์สวย ขนาดเป๊ะทั้งบนมือถือและคอมพิวเตอร์ สื่อความหมายชัดเจน</p>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl">
+                    <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center text-lg font-bold mb-4">03</div>
+                    <h3 class="font-bold text-white text-lg mb-2">ข้อมูลเพจครบถ้วนทุกช่อง</h3>
+                    <p class="text-slate-400 text-sm">รายละเอียดเกี่ยวกับร้าน สโลแกน คำอธิบาย และคีย์เวิร์ดสำหรับค้นหาติดง่าย</p>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl">
+                    <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center text-lg font-bold mb-4">04</div>
+                    <h3 class="font-bold text-white text-lg mb-2">10 โพสต์แรกลงเพจทันที</h3>
+                    <p class="text-slate-400 text-sm">โพสต์เปิดตัว โพสต์แนะนำสินค้า โพสต์สร้างความน่าเชื่อถือ พร้อมภาพประกอบสวยงาม</p>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl">
+                    <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center text-lg font-bold mb-4">05</div>
+                    <h3 class="font-bold text-white text-lg mb-2">ตารางตั้งคิวโพสต์อีก 29 วัน</h3>
+                    <p class="text-slate-400 text-sm">คอนเทนต์สำเร็จรูปอีก 29 โพสต์ให้เพจเคลื่อนไหวต่อเนื่องตลอดทั้งเดือน</p>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl">
+                    <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center text-lg font-bold mb-4">06</div>
+                    <h3 class="font-bold text-white text-lg mb-2">ระบบ AI Prompt ติดตัวตลอดชีพ</h3>
+                    <p class="text-slate-400 text-sm">นำไปใช้สร้างเพจใหม่กี่เพจก็ได้ ไม่จำกัดจำนวน ยิ่งทำยิ่งคุ้ม</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. PRICE COMPARISON SECTION -->
+    <section class="py-16 px-4 bg-slate-950">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl sm:text-4xl font-bold text-white mb-3">
+                    ถ้าไปจ้างทีมทำเอง <span class="text-rose-400">ราคาเท่าไหร่?</span>
+                </h2>
+                <p class="text-slate-400 text-sm sm:text-base">ลองเปรียบเทียบความคุ้มค่าก่อนตัดสินใจ</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <!-- Option Old -->
+                <div class="bg-slate-900 border border-rose-500/30 p-8 rounded-2xl text-center relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-rose-500/20 text-rose-300 text-xs px-3 py-1 rounded-bl-lg font-bold">แบบเดิม (จ้างทำ)</div>
+                    <h3 class="text-xl font-bold text-slate-300 mb-4">จ้างกราฟิก + แอดมิน</h3>
+                    <ul class="text-slate-400 text-sm space-y-3 mb-6 text-left border-y border-slate-800 py-4">
+                        <li class="flex justify-between"><span>ค่าออกแบบโลโก้</span> <span class="font-semibold text-slate-200">500 ฿</span></li>
+                        <li class="flex justify-between"><span>ค่าภาพปก Cover</span> <span class="font-semibold text-slate-200">500 ฿</span></li>
+                        <li class="flex justify-between"><span>ค่าทำคอนเทนต์ 39 โพสต์</span> <span class="font-semibold text-slate-200">7,500 ฿</span></li>
+                        <li class="flex justify-between"><span>ระยะเวลาการทำงาน</span> <span class="font-semibold text-rose-400">รอ 1-2 สัปดาห์</span></li>
+                    </ul>
+                    <div class="text-2xl font-extrabold text-rose-400">รวม 8,500 บาท</div>
+                </div>
+
+                <!-- Option New -->
+                <div class="bg-gradient-to-b from-slate-900 to-slate-800 border-2 border-amber-400 p-8 rounded-2xl text-center relative shadow-2xl">
+                    <div class="absolute top-0 right-0 bg-amber-400 text-slate-950 text-xs px-3 py-1 rounded-bl-lg font-bold">แนะนำ (ทำเองด้วย AI)</div>
+                    <h3 class="text-2xl font-extrabold text-amber-400 mb-4">ใช้ระบบ AI Page System</h3>
+                    <ul class="text-slate-200 text-sm space-y-3 mb-6 text-left border-y border-slate-700 py-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-400"></i> ได้โลโก้ + ปก + ข้อมูลเพจครบ</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-400"></i> ได้โพสต์ขายพร้อมภาพ 39 โพสต์</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-400"></i> ระยะเวลาทำเสร็จ: <span class="font-bold text-amber-300">ภายใน 1 วัน</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-400"></i> นำระบบไปทำเพจใหม่กี่เพจก็ได้</li>
+                    </ul>
+                    <div class="text-3xl font-extrabold text-amber-400">จ่ายเพียง 590 บาท</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. PRICING CARDS SECTION -->
+    <section id="pricing" class="py-16 px-4 bg-slate-900/60 border-t border-slate-800">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl sm:text-4xl font-bold text-white mb-3">
+                    เลือกแพ็กเกจที่ <span class="text-amber-400">ใช่สำหรับคุณ</span>
+                </h2>
+                <p class="text-slate-400 text-sm sm:text-base">เริ่มต้นวันนี้ เพจแรกเสร็จพร้อมขายทันที</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 items-stretch">
+                <!-- Pack 1 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 flex flex-col justify-between hover:border-slate-700 transition">
+                    <div>
+                        <span class="bg-slate-800 text-slate-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">แพ็ก 1</span>
+                        <h3 class="text-2xl font-bold text-white mt-3 mb-1">เรียนตามคลิป ทำเองที่บ้าน</h3>
+                        <p class="text-slate-400 text-sm mb-6">เหมาะสำหรับคนที่ชอบเรียนรู้ด้วยตัวเอง ดูคลิปซ้ำได้ตลอด</p>
+                        
+                        <div class="mb-6 bg-slate-950/60 p-4 rounded-xl border border-slate-800/80">
+                            <div class="flex items-baseline gap-3">
+                                <span class="text-4xl font-extrabold text-amber-400">590 ฿</span>
+                                <span class="line-through text-slate-500 text-lg">990 ฿</span>
+                            </div>
+                            <span class="text-xs text-rose-400 mt-1 block">*ราคาเปิดตัวเฉพาะช่วงโปรโมชั่นนี้เท่านั้น</span>
+                        </div>
+
+                        <ul class="space-y-3 text-slate-300 text-sm mb-8">
+                            <li class="flex items-start gap-2.5"><i class="fa-solid fa-circle-check text-green-400 mt-0.5"></i> <span>คลิปสอนครบทุกขั้นตอน ดูซ้ำได้ตลอดชีพ</span></li>
+                            <li class="flex items-start gap-2.5"><i class="fa-solid fa-circle-check text-green-400 mt-0.5"></i> <span>ได้ระบบสำเร็จรูป (System Prompt) ไปใช้ทันที</span></li>
+                            <li class="flex items-start gap-2.5"><i class="fa-solid fa-circle-check text-green-400 mt-0.5"></i> <span>อัปเดตเนื้อหาใหม่ให้ฟรีตลอดเมื่อ AI มีเวอร์ชันใหม่</span></li>
+                        </ul>
+
+                        <div class="border-t border-slate-800 pt-4 mb-8">
+                            <div class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-3">🎁 โบนัสพิเศษที่แถมให้ฟรี</div>
+                            <ul class="space-y-2 text-slate-300 text-xs">
+                                <li class="flex items-start gap-2"><i class="fa-solid fa-star text-amber-400 mt-0.5"></i> <span><b>โบนัส 1:</b> ทีมงานรีโมตช่วยสอนหน้าจอ ฟรี 1 ครั้ง</span></li>
+                                <li class="flex items-start gap-2"><i class="fa-solid fa-star text-amber-400 mt-0.5"></i> <span><b>โบนัส 2:</b> Prompt สั่ง ChatGPT เจนเพจคลิกเดียวจบ</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <a href="https://m.me/your-page-id" target="_blank" class="block w-full text-center bg-slate-800 hover:bg-slate-700 text-white font-bold py-3.5 rounded-xl transition border border-slate-700">
+                        พิมพ์ "สนใจ แพ็ก 1" ทักแชท →
+                    </a>
+                </div>
+
+                <!-- Pack 2 (Recommended) -->
+                <div class="bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 border-2 border-amber-400 rounded-3xl p-8 flex flex-col justify-between relative shadow-2xl">
+                    <span class="absolute -top-3.5 right-8 bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 text-xs font-extrabold px-4 py-1.5 rounded-full shadow-md">
+                        ★ แนะนำ คุ้มที่สุด
+                    </span>
+                    <div>
+                        <span class="bg-amber-400/10 text-amber-400 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-amber-400/30">แพ็ก 2</span>
+                        <h3 class="text-2xl font-bold text-white mt-3 mb-1">เรียนตัวต่อตัวผ่าน Zoom + ชุดสร้างธุรกิจ</h3>
+                        <p class="text-slate-400 text-sm mb-6">จับมือทำสดๆ จนเพจเสร็จจริง พร้อมอุปกรณ์สร้างธุรกิจครบวงจร</p>
+                        
+                        <div class="mb-6 bg-slate-950/60 p-4 rounded-xl border border-amber-400/20">
+                            <div class="flex items-baseline gap-3">
+                                <span class="text-4xl font-extrabold text-amber-400">5,990 ฿</span>
+                                <span class="line-through text-slate-500 text-lg">8,990 ฿</span>
+                            </div>
+                            <span class="text-xs text-amber-300 mt-1 block">*รับจำกัดเพียง 10 ท่านต่อสัปดาห์เท่านั้น</span>
+                        </div>
+
+                        <ul class="space-y-3 text-slate-200 text-sm mb-8">
+                            <li class="flex items-start gap-2.5"><i class="fa-solid fa-circle-check text-green-400 mt-0.5"></i> <span>เรียนสดตัวต่อตัวทาง Zoom จับมือทำจนเพจเสร็จจริง</span></li>
+                            <li class="flex items-start gap-2.5"><i class="fa-solid fa-circle-check text-green-400 mt-0.5"></i> <span>ทำ Automation ตั้งคิวโพสต์ 39 โพสต์ไปด้วยกัน</span></li>
+                            <li class="flex items-start gap-2.5"><i class="fa-solid fa-circle-check text-green-400 mt-0.5"></i> <span>ได้รับสิทธิ์และอุปกรณ์ทั้งหมดในแพ็ก 1 ครบถ้วน</span></li>
+                        </ul>
+
+                        <div class="border-t border-slate-800 pt-4 mb-8">
+                            <div class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-3">🔥 โบนัสพิเศษ 4 รายการใหญ่</div>
+                            <ul class="space-y-2 text-slate-300 text-xs">
+                                <li class="flex items-start gap-2"><i class="fa-solid fa-star text-amber-400 mt-0.5"></i> <span><b>โบนัส 1:</b> สอนสร้างร่างอวตารพากย์เสียงทำคลิปโฆษณา</span></li>
+                                <li class="flex items-start gap-2"><i class="fa-solid fa-star text-amber-400 mt-0.5"></i> <span><b>โบนัส 2:</b> สอนสร้าง Salepage / Website ของตัวเอง</span></li>
+                                <li class="flex items-start gap-2"><i class="fa-solid fa-star text-amber-400 mt-0.5"></i> <span><b>โบนัส 3:</b> สอนสร้าง AI Chatbot ตอบแชทเพจอัตโนมัติ 24 ชม.</span></li>
+                                <li class="flex items-start gap-2"><i class="fa-solid fa-star text-amber-400 mt-0.5"></i> <span><b>โบนัส 4:</b> สอนสร้าง Ebook สินค้าดิจิทัลไว้ขายเพิ่มรายได้</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <a href="https://m.me/your-page-id" target="_blank" class="block w-full text-center bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold py-4 rounded-xl transition shadow-xl text-lg">
+                        พิมพ์ "สนใจ แพ็ก 2" ทักแชท →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. REVIEWS & PORTFOLIO SECTION -->
+    <section class="py-16 px-4 bg-slate-950">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-2xl sm:text-4xl font-bold text-white mb-3">
+                ผลงานและ <span class="text-amber-400">รีวิวจากผู้เรียนจริง</span>
+            </h2>
+            <p class="text-slate-400 text-sm sm:text-base mb-12">ส่วนหนึ่งของเพจที่สร้างด้วยระบบ AI Page System</p>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Portfolio Card 1 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden text-left">
+                    <img src="https://images.unsplash.com/photo-1556742049-0a67f572c9ee?auto=format&fit=crop&w=600&q=80" alt="เพจร้านกาแฟ" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <span class="text-xs bg-amber-500/10 text-amber-400 font-bold px-2.5 py-1 rounded-full">AI สร้าง 100%</span>
+                        <h4 class="font-bold text-white text-base mt-2">เพจร้านกาแฟพรีเมียม</h4>
+                        <p class="text-slate-400 text-xs mt-1">โลโก้, ปก, ข้อมูลร้าน และ 39 คอนเทนต์สร้างด้วย AI ทั้งหมด</p>
+                    </div>
+                </div>
+                <!-- Portfolio Card 2 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden text-left">
+                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80" alt="เพจสกินแคร์" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <span class="text-xs bg-amber-500/10 text-amber-400 font-bold px-2.5 py-1 rounded-full">AI สร้าง 100%</span>
+                        <h4 class="font-bold text-white text-base mt-2">เพจสกินแคร์และออร์แกนิก</h4>
+                        <p class="text-slate-400 text-xs mt-1">ใช้เวลาสร้างเพียง 45 นาที มีโพสต์ขายพร้อมยิงแอดทันที</p>
+                    </div>
+                </div>
+                <!-- Portfolio Card 3 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden text-left">
+                    <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=600&q=80" alt="เพจฟิตเนส" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <span class="text-xs bg-amber-500/10 text-amber-400 font-bold px-2.5 py-1 rounded-full">AI สร้าง 100%</span>
+                        <h4 class="font-bold text-white text-base mt-2">เพจอาหารเสริมออกกำลังกาย</h4>
+                        <p class="text-slate-400 text-xs mt-1">ตั้งคิวโพสต์ล่วงหน้า 1 เดือน ไม่ต้องเสียเวลานั่งทำเองทุกวัน</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. FAQ SECTION -->
+    <section class="py-16 px-4 bg-slate-900/40 border-t border-slate-800">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl sm:text-4xl font-bold text-white mb-3">คำถามที่พบบ่อย (FAQ)</h2>
+                <p class="text-slate-400 text-sm sm:text-base">ข้อสงสัยก่อนตัดสินใจ สมัครเรียนแล้วได้อะไรบ้าง</p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-xl p-5">
+                    <h3 class="font-bold text-white text-base sm:text-lg mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-circle-question text-amber-400"></i>
+                        ไม่มีประสบการณ์เลย เรียนได้ไหม?
+                    </h3>
+                    <p class="text-slate-400 text-sm leading-relaxed pl-7">
+                        เรียนได้แน่นอนครับ คอร์สนี้ออกแบบมาสำหรับมือใหม่ 0 ประสบการณ์ ทุกขั้นตอนสอนแบบ ก๊อป-วาง-กด ไม่ต้องเขียนคำสั่งเอง ไม่ต้องรู้ภาษาอังกฤษ AI สอนให้ตอบเป็นภาษาไทยทั้งหมดครับ
+                    </p>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-xl p-5">
+                    <h3 class="font-bold text-white text-base sm:text-lg mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-circle-question text-amber-400"></i>
+                        ต้องใช้คอมพิวเตอร์ไหม ใช้มือถือทำได้หรือไม่?
+                    </h3>
+                    <p class="text-slate-400 text-sm leading-relaxed pl-7">
+                        ใช้มือถือทำได้ครับ แต่ถ้ามีคอมพิวเตอร์หรือโน้ตบุ๊กจะสะดวกกว่าเพราะหน้าจอใหญ่และตั้งคิวโพสต์ได้รวดเร็วขึ้น ในคอร์สมีสอนทั้ง 2 แบบครับ
+                    </p>
+                </div>
+                <!-- FAQ Item 3 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-xl p-5">
+                    <h3 class="font-bold text-white text-base sm:text-lg mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-circle-question text-amber-400"></i>
+                        ต้องเสียเงินค่าสมัคร AI เพิ่มไหม?
+                    </h3>
+                    <p class="text-slate-400 text-sm leading-relaxed pl-7">
+                        ระบบใช้ได้กับทั้ง ChatGPT, Claude และ Gemini เวอร์ชันฟรีครับ เพียงพอสำหรับการสร้างเพจ 1 เพจแรก หากต้องการทำหลายๆ เพจต่อเนื่องในอนาคตแนะนำสมัครแบบเสียเงินรายเดือนคุ้มที่สุดครับ
+                    </p>
+                </div>
+                <!-- FAQ Item 4 -->
+                <div class="bg-slate-900 border border-slate-800 rounded-xl p-5">
+                    <h3 class="font-bold text-white text-base sm:text-lg mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-circle-question text-amber-400"></i>
+                        คลิปสอนดูซ้ำได้นานแค่ไหน?
+                    </h3>
+                    <p class="text-slate-400 text-sm leading-relaxed pl-7">
+                        ดูซ้ำได้ตลอดชีพครับ ไม่มีวันหมดอายุ สามารถกลับมาดูทบทวนหรืออัปเดตเนื้อหาใหม่ๆ ได้ฟรีตลอดเวลา
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 py-8 px-4 border-t border-slate-800 text-center text-slate-500 text-xs">
+        <p class="mb-2">© 2026 AI Page System. All rights reserved.</p>
+        <p>คอร์สออนไลน์สอนสั่ง AI สร้างเพจขายดีสำหรับมือใหม่ | ติดต่อสอบถามทักแชทเพจ Facebook</p>
+    </footer>
+
+    <!-- 11. STICKY BOTTOM CTA (For Mobile View) -->
+    <div class="fixed bottom-0 left-0 right-0 bg-slate-900/95 backdrop-blur-md border-t border-slate-800 p-3 flex justify-between items-center z-50 md:hidden shadow-2xl">
+        <div>
+            <div class="text-[10px] text-slate-400">ราคาพิเศษเริ่มต้น</div>
+            <div class="text-lg font-extrabold text-amber-400">590 ฿ <span class="text-xs line-through text-slate-500 font-normal">990 ฿</span></div>
+        </div>
+        <a href="https://m.me/your-page-id" target="_blank" class="bg-green-500 hover:bg-green-400 text-slate-950 font-bold px-5 py-2.5 rounded-xl text-sm flex items-center gap-2 shadow-lg">
+            <i class="fa-brands fa-facebook-messenger"></i>
+            พิมพ์ "สนใจ" ทักแชท
+        </a>
+    </div>
+
+    <!-- COUNTDOWN TIMER SCRIPT -->
+    <script>
+        function startTimer(duration, display) {
+            let timer = duration, hours, minutes, seconds;
+            setInterval(function () {
+                hours = parseInt(timer / 3600, 10);
+                minutes = parseInt((timer % 3600) / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+
+                hours = hours < 10 ? "0" + hours : hours;
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                display.textContent = hours + ":" + minutes + ":" + seconds;
+
+                if (--timer < 0) {
+                    timer = duration; // Reset timer when finished
+                }
+            }, 1000);
+        }
+
+        window.onload = function () {
+            let fiveHours = 60 * 60 * 5;
+            let display = document.querySelector('#countdown');
+            startTimer(fiveHours, display);
+        };
+    </script>
+</body>
+</html>
